@@ -1,0 +1,104 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(12, 0, 0);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.black {
+    color: black;
+}
+
+.red {
+    color: red;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(250, 248, 248);
+}
+
+.slide{
+    display: flex;
+    overflow: hidden;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+   
+}
+
+li{
+    list-style: none;
+    margin: 10px;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+section{
+    margin: 80px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+footer {
+    
+    background-color: black;
+    color: white;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.footer-info, .builder-info {
+    flex: 1;
+}
+
+.footer-info p, .builder-info p {
+    margin: 5px 0;
+}
+

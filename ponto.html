@@ -1,0 +1,136 @@
+<!-- home.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDVEX - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="">PDV</span><span class="red">EX</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#">Institucional</a></li>
+                <li><a href="#">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main><br>
+    <div id="digitalClock">
+        <!-- O relógio será exibido aqui -->
+    </div><br>
+    <section>
+        <form id="employeeForm">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf" required>
+            <br>
+    
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <br>
+    
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <br>
+    
+            <label for="entryTime">Entrada:</label>
+            <input type="text" id="entryTime" name="entryTime" placeholder="HH:mm" required>
+            <br>
+    
+            <label for="exitTime">Saída:</label>
+            <input type="text" id="exitTime" name="exitTime" placeholder="HH:mm">
+    <br><br>
+            <button type="button" onclick="saveData()">Salvar</button>
+        </form>
+    </section>
+    
+</main>
+
+<!-- ... (código posterior) ... -->
+<!-- home.html -->
+
+<!-- ... (código anterior) ... -->
+<script>
+    // Função para formatar números para exibir dois dígitos (por exemplo, 01, 02, ..., 09)
+    function formatNumber(num) {
+        return num < 10 ? '0' + num : num;
+    }
+
+    // Função para atualizar o relógio digital
+    function updateDigitalClock() {
+        const clockElement = document.getElementById('digitalClock');
+
+        // Obter a hora atual
+        const currentTime = new Date();
+        const hours = formatNumber(currentTime.getHours());
+        const minutes = formatNumber(currentTime.getMinutes());
+        const seconds = formatNumber(currentTime.getSeconds());
+
+        // Atualizar o conteúdo da div do relógio
+        clockElement.textContent = `${hours}:${minutes}:${seconds}`;
+
+        // Atualizar a cada segundo
+        setTimeout(updateDigitalClock, 1000);
+    }
+
+    // Chamar a função para iniciar o relógio digital
+    updateDigitalClock();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.4/xlsx.full.min.js"></script>
+<script>
+    function saveData() {
+        // Obter os valores do formulário
+        const Cpf = document.getElementById('cpf').value;
+        const Nome = document.getElementById('firstName').value;
+        const Sobrenome = document.getElementById('lastName').value;
+        const Entrada = document.getElementById('entryTime').value;
+        const Saida = document.getElementById('exitTime').value || ''; // Saída é opcional
+
+        // Criar um objeto com os dados
+        const dataAtual = new Date();
+        const employeeData = { Cpf, Nome, Sobrenome, Entrada, Saida, dataAtual };
+
+        // Chamar função para salvar os dados na planilha
+        saveToExcel(employeeData);
+    }
+
+    function saveToExcel(employeeData) {
+        // Criar uma planilha
+        const wb = XLSX.utils.book_new();
+        const ws = XLSX.utils.json_to_sheet([employeeData]);
+
+        // Adicionar a planilha ao livro
+        XLSX.utils.book_append_sheet(wb, ws, 'Funcionarios');
+
+        // Salvar o arquivo Excel
+        XLSX.writeFile(wb, 'registros.xlsx');
+    }
+</script>
+
+<!-- ... (código posterior) ... -->
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 InfoDEVBrasil. Todos os direitos reservados.</p>
+                <p>Endereço: Rua. Laurindo Filho, 314 - Cavalcanti, Rio de Janeiro</p>
+                <p>Email: infodevbrasil@gmail.com</p>
+                <p>Telefone: (21) 96656-2979</p>
+            </div>
+            <div class="builder-info">
+                <p>Construtor do Site: InfoDEVBrasil - MEI</p>
+                <p>CNPJ: 48.057.498/0001-55</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
