@@ -30,7 +30,7 @@ header {
     font-weight: bold;
 }
 
-.logo p{
+.logo p {
     margin-top: -10%;
     margin-left: 55%;
     font-size: x-small;
@@ -59,7 +59,6 @@ nav a {
 }
 
 li {
-    /* Remover a declaração duplicada */
     list-style-type: none;
     margin: 10px;
 }
@@ -77,15 +76,14 @@ main {
 
 .slider img {
     width: 350px;
-    height: 300px;   
-    
+    height: 300px;
 }
 
 #footer {
     background-color: rgb(12, 0, 0);
     color: white;
     width: 100%;
-    position: relative; /* Alterado para 'fixed' */
+    position: fixed;
     padding: 10px;
     bottom: 0;
 }
@@ -97,6 +95,38 @@ main {
 .footer-info,
 .builder-info {
     text-align: left;
-    /* Adicionar margin para melhor espaçamento */
     margin-top: 10px;
+}
+
+/* Adicionando a regra @media para responsividade */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo p {
+        margin-top: 0;
+        margin-left: 0;
+        font-size: small;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .slider img {
+        width: 100%;
+        height: auto;
+    }
+
+    #footer {
+        position: static;
+    }
 }
