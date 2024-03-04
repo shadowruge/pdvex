@@ -71,13 +71,13 @@ main{
 }
 
 footer {
-    
+        
     background-color: black;
     color: white;
     text-align: left;
     position: absolute;
-  width: 100%;
-  bottom: -150px;
+    width: 100%;
+    bottom: -150px;
   
     
 }
@@ -102,13 +102,13 @@ footer {
     content: "";
     }
    
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 1000px) {
     .footer-content {
     font-size: 18px;
     }
     }
        
-    @media only screen and (min-width: 568px) {
+    @media only screen and (min-width: 1000px) {
     .footer-info-wrap {
     width: 33.3333%;
     }
