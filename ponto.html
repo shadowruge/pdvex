@@ -24,9 +24,8 @@
         </nav>
     </header>
 
-<main><br>
-   
-    <section>
+
+    <main>
         <div id="digitalClock">
             <!-- O relógio será exibido aqui -->
         </div><br>
@@ -52,9 +51,9 @@
     <br><br>
             <button type="button" onclick="saveData()">Salvar</button>
         </form>
-    </section>
+    </main>
     
-</main>
+
 
 <script>
     // Função para formatar números para exibir dois dígitos (por exemplo, 01, 02, ..., 09)
@@ -112,21 +111,19 @@
         XLSX.writeFile(wb, 'registros.xlsx');
     }
 </script>
-
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <p>&copy; 2024 InfoDEVBrasil. Todos os direitos reservados.</p>
-                <p>Endereço: Rua. Laurindo Filho, 314 - Cavalcanti, Rio de Janeiro</p>
-                <p>Email: infodevbrasil@gmail.com</p>
-                <p>Telefone: (21) 96656-2979</p>
-            </div>
-            <div class="builder-info">
-                <p>Construtor do Site: InfoDEVBrasil - MEI</p>
-                <p>CNPJ: 48.057.498/0001-55</p>
-            </div>
+<div id="footer">
+    <div class="footer-content">
+        <div class="footer-info">
+            <p>&copy; 2024 InfoDEVBrasil. Todos os direitos reservados.</p>
+            <p>Endereço: Rua. Laurindo Filho, 314 - Cavalcanti, Rio de Janeiro</p>
+            <p>Email: infodevbrasil@gmail.com</p>
+            <p>Telefone: (21) 96656-2979</p>
         </div>
-    </footer>
+        <div class="builder-info">
+            <p>Construtor do Site: InfoDEVBrasil - MEI</p>
+            <p>CNPJ: 48.057.498/0001-55</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
