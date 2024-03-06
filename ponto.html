@@ -24,34 +24,35 @@
             </ul>
         </nav>
     </header>
-
-
     <main>
         <div id="digitalClock">
             <!-- O relógio será exibido aqui -->
         </div><br>
-        <form id="employeeForm">
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" required>
-            <br>
-    
-            <label for="firstName">Nome:</label>
-            <input type="text" id="firstName" name="firstName" required>
-            <br>
-    
-            <label for="lastName">Sobrenome:</label>
-            <input type="text" id="lastName" name="lastName" required>
-            <br>
-    
-            <label for="entryTime">Entrada:</label>
-            <input type="text" id="entryTime" name="entryTime" placeholder="HH:mm" required>
-            <br>
-    
-            <label for="exitTime">Saída:</label>
-            <input type="text" id="exitTime" name="exitTime" placeholder="HH:mm">
-    <br><br>
-            <button type="button" onclick="saveData()">Salvar</button>
-        </form>
+        <div id="form">
+            <form id="employeeForm">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                <br>
+        
+                <label for="firstName">Nome:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <br>
+        
+                <label for="lastName">Sobrenome:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <br>
+        
+                <label for="entryTime">Entrada:</label>
+                <input type="text" id="entryTime" name="entryTime" placeholder="HH:mm" required>
+                <br>
+        
+                <label for="exitTime">Saída:</label>
+                <input type="text" id="exitTime" name="exitTime" placeholder="HH:mm">
+        <br><br>
+                <button type="button" onclick="saveData()">Salvar</button>
+            </form>
+        </div>
+        
     </main>
     
 
