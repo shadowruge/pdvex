@@ -18,9 +18,10 @@ function salvar() {
 
   funcionarios =
     `<div>
+    <br>
   <table border="1">
   <tr>
-    <td>Cpf</td>
+    <td>Cpf</td> 
     <td>Nome</td>
     <td>Sobrenome</td>
     <td>Hora</td>
@@ -33,8 +34,8 @@ function salvar() {
   </tr>
   
   <tr>
-    <td>${cpf.value}</td>
-    <td>${nome.value}</td>
+    <td>${cpf.value}${[]}</td>
+    <td>${[]} ${nome.value}</td>
     <td>${sobrenome.value}</td>
     <td>${now.getHours()}</td>
     <td>${now.getMinutes()}</td>
@@ -46,5 +47,5 @@ function salvar() {
   </tr>
   </table>
 
-  </div>`
+  </div><hr>`
   document.getElementById("view").innerHTML += funcionarios}

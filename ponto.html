@@ -2,16 +2,18 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDVEX - Home</title>
-    <link rel="shortcut icon" href="/" type="image/x-icon">
-    <!--<link rel="stylesheet" href="css/style.css">-->
-    <link rel="stylesheet" href="css/bkp_style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pdvex Site</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+      </head>
 <body>
-    <header>
+    <header class="w-full">
         <div class="logo">
             <span class="">PDV</span><span class="red">EX</span>
             <p>Cenogrfia</p>
@@ -29,21 +31,25 @@
         <div id="digitalClock">
             <!-- O relógio será exibido aqui -->
         </div><br>
-        
-    <label for="">Cpf</label>
-    <input id="cpf" type="text"><br>
-
-    <label for="">Nome</label>
-    <input id="nome" type="text"><br>
-
-    <label for="">Sobrenome</label>
-    <input id="sobrenome" type="text"><br>
-
-    <button onclick="salvar()">Cadastro</button>
+        <div class="form">
     
+            <label for="">Cpf</label>
+            <input id="cpf" type="text"><br>
+        
+            <label for="">Nome</label>
+            <input id="nome" type="text"><br>
+        
+            <label for="">Sobrenome</label>
+            <input id="sobrenome" type="text"><br><br>
+        
+            <button type="button" class="btn btn-primary" onclick="salvar()">Cadastro</button>
+            <hr>
+            
+        </div>
+        <div id="view"></div>
         
     </main>
-    <div id="view"></div>
+ 
 
 <script src="main.js"></script>
 <script src="clock.js"></script>
