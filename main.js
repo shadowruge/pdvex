@@ -34,15 +34,16 @@ function salvar() {
   </tr>
   
   <tr>
-    <td>${cpf.value}${[]}</td>
-    <td>${[]} ${nome.value}</td>
-    <td>${sobrenome.value}</td>
-    <td>${now.getHours()}</td>
-    <td>${now.getMinutes()}</td>
-    <td>${dayName[now.getDay()]}</td>
-    <td>${now.getDate()}</td>
-    <td>${monName[now.getMonth()]}</td>
-    <td>${now.getFullYear()}</td>
+  
+    <th>${cpf.value}${[]}</th>
+    <th>${[]} ${nome.value}</th>
+    <th>${sobrenome.value}</th>
+    <th>${now.getHours()}</th>
+    <th>${now.getMinutes()}</th>
+    <th>${dayName[now.getDay()]}</th>
+    <th>${now.getDate()}</th>
+    <th>${monName[now.getMonth()]}</th>
+    <th>${now.getFullYear()}</th>
    
   </tr>
   </table>
