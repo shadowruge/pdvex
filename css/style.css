@@ -82,6 +82,17 @@ main{
     
 }
 
+table {
+    width: 100%;
+  }
+  
+  th,td{
+   
+    padding: 5px;
+  }
+  
+
+
 
 table {
     width: 100%;
