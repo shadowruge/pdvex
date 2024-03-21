@@ -82,6 +82,16 @@ main{
     
 }
 
+
+table {
+    width: 100%;
+  }
+  
+  th,td{
+   
+    padding: 5px;
+  }
+
 #footer {
     background-color: rgb(12, 0, 0);
     color: white;
