@@ -18,35 +18,34 @@ function salvar() {
 
   funcionarios =
     `<div>
-    <br>
-  <table border="1">
+    <table>
   <tr>
-    <td>Cpf</td> 
-    <td>Nome</td>
-    <td>Sobrenome</td>
-    <td>Hora</td>
-    <td>Minutos</td>
-    <td>Dia</td>
-    <td>Data</td>
-    <td>Mês</td>
-    <td>Ano</td>
+    <th>Cpf</th> 
+    <th>Nome</th>
+    <th>Sobrenome</th>
+    <th>Hora</th>
+    <th>Minutos</th>
+    <th>Dia</th>
+    <th>Data</th>
+    <th>Mês</th>
+    <th>Ano</th>
     
   </tr>
   
   <tr>
-  
-    <th>${cpf.value}${[]}</th>
-    <th>${[]} ${nome.value}</th>
-    <th>${sobrenome.value}</th>
-    <th>${now.getHours()}</th>
-    <th>${now.getMinutes()}</th>
-    <th>${dayName[now.getDay()]}</th>
-    <th>${now.getDate()}</th>
-    <th>${monName[now.getMonth()]}</th>
-    <th>${now.getFullYear()}</th>
+    <td>${cpf.value}${[]}</td>
+    <td>${[]} ${nome.value}</td>
+    <td>${sobrenome.value}</th>
+    <td>${now.getHours()}</td>
+    <td>${now.getMinutes()}</td>
+    <td>${dayName[now.getDay()]}</td>
+    <td>${now.getDate()}</th>
+    <td>${monName[now.getMonth()]}</td>
+    <td>${now.getFullYear()}</td>
    
   </tr>
   </table>
 
-  </div><hr>`
+  </div>
+  `
   document.getElementById("view").innerHTML += funcionarios}
