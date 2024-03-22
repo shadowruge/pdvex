@@ -1,11 +1,21 @@
 /* styles.css */
 
 * {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+padding:0;
+margin:0;
+vertical-align:baseline;
+list-style:none;
+border:0
 }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+
 
 body {
     margin: 0;
