@@ -150,14 +150,14 @@ main{
 @media screen and (max-width: 768px) {
     html {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        
     }
 }
 
 @media screen and (max-width: 426px) {
     html {
         grid-template-columns: repeat(2, 1fr);
-        padding: 3rem;
+        
     }
 }
 
