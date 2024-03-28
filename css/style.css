@@ -111,9 +111,6 @@ img {
     margin: 5%;
     margin-bottom: 20%;
 }
-#view{
-max-width: 100%;
-}
 
 table {
     width: 100%;
@@ -144,7 +141,7 @@ td {
 }
 
 /* Devices min */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
     body {
         grid-template-columns: repeat(2, 1fr);
         
