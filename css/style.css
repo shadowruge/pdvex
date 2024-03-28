@@ -125,9 +125,6 @@ td {
     margin: 15px;
     
 }
-main{
-   height: 80vh; 
-}
 
 #footer {
     background-color: black;
@@ -148,14 +145,14 @@ main{
 
 /* Devices min */
 @media screen and (max-width: 768px) {
-    html {
+    body {
         grid-template-columns: repeat(2, 1fr);
         
     }
 }
 
 @media screen and (max-width: 426px) {
-    html {
+    body {
         grid-template-columns: repeat(2, 1fr);
         
     }
